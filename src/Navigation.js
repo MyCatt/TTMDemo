@@ -16,7 +16,7 @@ function Navigation() {
         </div>
         <div className="sidebar__inner__main">
             {
-                Object.keys(links).map(link => <div>
+                Object.keys(links).map(link => <div className={"nav-" + link} >
                     <a href="" className={links[link].active ? "sidebar__inner--item active" : "sidebar__inner--item"}>
                         {links[link].icon}
                         <p>{link}</p>

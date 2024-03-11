@@ -31,7 +31,12 @@ function Library() {
                     <div className="dropdown-wrapper">
                         <div className="dropdown-variables dropdown">
                             <label>Variable Set</label>
-                            <button>Default</button>
+                            <button className="dropdown">
+                                Default
+                                <span class="material-symbols-outlined">
+                                    expand_more
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -42,7 +47,7 @@ function Library() {
                 <div className="library-header__left">
                     <div className="tabs">
                         <div className="tab-wrapper  active">
-                            <div className="tab">Finance &#x26; Operations</div>
+                            <div className="tab finops-tab">Finance &#x26; Operations</div>
                             <span className="total-variable badge badge-secondary">5</span>
                         </div>
                     </div>
@@ -52,7 +57,12 @@ function Library() {
             <div className="library-body">
                 <div className="list-action">
                     <div className="list-action__left">
-                        <button>10.0.0.39</button>
+                        <button className="dropdown version">
+                            10.0.0.39
+                            <span class="material-symbols-outlined">
+                                    expand_more
+                            </span>
+                        </button>
                         <div className="divider"></div>
                         <button>
                             <span class="material-symbols-outlined">post_add</span>
