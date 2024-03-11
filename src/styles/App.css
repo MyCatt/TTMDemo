@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "ProximaNova";
+  src: local("ProximaNova"), url(../fonts/Fontspring-DEMO-proximanova-regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "ProximaNova";
+  font-weight: 700;
+  src: local("ProximaNova"), url(../fonts/Fontspring-DEMO-proximanova-medium.otf) format("opentype");
+}
+@font-face {
+  font-family: "ProximaNova";
+  font-weight: 900;
+  src: local("ProximaNova"), url(../fonts/Fontspring-DEMO-proximanova-bold.otf) format("opentype");
+}
+.App {
+  display: grid;
+  grid-template-columns: 120px auto;
+  background: #e7ecf1;
+  font-family: ProximaNova;
+}/*# sourceMappingURL=App.css.map */
