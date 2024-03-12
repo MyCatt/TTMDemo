@@ -1,5 +1,6 @@
 import './styles/library.css';
 import React, { useState, useEffect, forceUpdate } from 'react';
+import { Link } from 'react-router-dom';
 
 function Library() {
 
@@ -134,7 +135,9 @@ function Library() {
                                             <td><span className="pass">{data[d]['runstatus']}</span></td>
             
                                             <td className="options">
-                                                <span class="material-symbols-outlined">play_circle</span>
+                                                <Link to={"/run/" + d.replaceAll(" ", "-").toLowerCase()}>
+                                                    <span class="material-symbols-outlined">play_circle</span>
+                                                </Link>
                                                 <span class="material-symbols-outlined">edit</span>
                                             </td>
                                         </tr>
