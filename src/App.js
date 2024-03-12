@@ -9,7 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/TTMDemo'>
           <Routes>
             <Route path="/" element=
             {
