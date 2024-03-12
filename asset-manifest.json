@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/TTMDemo/static/css/main.b0093a7d.css",
-    "main.js": "/TTMDemo/static/js/main.48d51b28.js",
+    "main.js": "/TTMDemo/static/js/main.7dd999c1.js",
     "static/js/453.1b6cbde4.chunk.js": "/TTMDemo/static/js/453.1b6cbde4.chunk.js",
     "static/media/Fontspring-DEMO-proximanova-bold.otf": "/TTMDemo/static/media/Fontspring-DEMO-proximanova-bold.7b3122482730ca570494.otf",
     "static/media/Fontspring-DEMO-proximanova-medium.otf": "/TTMDemo/static/media/Fontspring-DEMO-proximanova-medium.ee2c5881d2578dc66702.otf",
     "static/media/Fontspring-DEMO-proximanova-regular.otf": "/TTMDemo/static/media/Fontspring-DEMO-proximanova-regular.9443b70950f4aabd42ab.otf",
     "index.html": "/TTMDemo/index.html",
     "main.b0093a7d.css.map": "/TTMDemo/static/css/main.b0093a7d.css.map",
-    "main.48d51b28.js.map": "/TTMDemo/static/js/main.48d51b28.js.map",
+    "main.7dd999c1.js.map": "/TTMDemo/static/js/main.7dd999c1.js.map",
     "453.1b6cbde4.chunk.js.map": "/TTMDemo/static/js/453.1b6cbde4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b0093a7d.css",
-    "static/js/main.48d51b28.js"
+    "static/js/main.7dd999c1.js"
   ]
 }
