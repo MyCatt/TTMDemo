@@ -51,6 +51,42 @@ $primary: #004257;
             margin: 0;
             padding: 0;
             display: inline-block;
+            animation: 0.3s scaleIn forwards;
         }
+    }
+    .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid #004257;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+        position: fixed;
+        left: calc(50% - 24px);
+        top: calc(50% - 24px);
+        }
+    
+        @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+        } 
+}
+
+@keyframes scaleIn
+{
+    from
+    {
+        transform: scale(0);
+    }
+
+    to
+    {
+        transform: scale(1);
     }
 }

@@ -18,6 +18,10 @@ const steps = [
   {
     target: '.version',
     content: 'The version dropdown lets us jump between testing different versions of Finance & Operations. TheTestMart manages a library of base test and commands between these versions so that you don\'t need to spend hours tinkering with your tests each time Microsoft change something.',
+  },
+  {
+    target: ".run-button",
+    content: "You can play a test at anytime by pressing the 'Run' Button. This option lets you watch it live."
   }
 ];
 
@@ -35,7 +39,7 @@ root.render(
           arrowColor: '#fff',
           backgroundColor: '#fff',
           overlayColor: 'rgba(0, 0, 0, 0.4)',
-          primaryColor: 'yellow',
+          primaryColor: '#44c3c3',
           textColor: '#000',
           beaconSize: 50,
           zIndex: 1000,

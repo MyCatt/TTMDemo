@@ -12,7 +12,7 @@ function Library() {
 
     const [data, setData] = useState({
             "Create Vendor": {selected: false, status: "Active", owner: "Michael Catterall", lastrun: "Yesterday", runstatus: "Pass"},
-            "Create Vendor Template": {selected: true, status: "Active", owner: "Michael Catterall", lastrun: "Yesterday", runstatus: "Pass"}
+            "Create Vendor Template": {selected: false, status: "Active", owner: "Michael Catterall", lastrun: "Yesterday", runstatus: "Pass"}
     });
 
     function toggleExpand()
@@ -135,7 +135,7 @@ function Library() {
                                             <td><span className="pass">{data[d]['runstatus']}</span></td>
             
                                             <td className="options">
-                                                <Link to={"/run/" + d.replaceAll(" ", "-").toLowerCase()}>
+                                                <Link className="run-button" to={"/run/" + d.replaceAll(" ", "-").toLowerCase()}>
                                                     <span class="material-symbols-outlined">play_circle</span>
                                                 </Link>
                                                 <span class="material-symbols-outlined">edit</span>
