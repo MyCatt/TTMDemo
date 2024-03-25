@@ -88,6 +88,7 @@
 }
 .library .library-header .library-header__left .tabs {
   height: 100%;
+  display: flex;
 }
 .library .library-header .library-header__left .tabs .tab-wrapper {
   display: flex;
@@ -96,12 +97,13 @@
   margin-right: 30px;
   align-items: center;
   cursor: pointer;
+  color: #3d3d3d;
 }
 .library .library-header .library-header__left .tabs .tab-wrapper.active {
   border-bottom: 1px solid #004257;
+  color: #004257;
 }
 .library .library-header .library-header__left .tabs .tab-wrapper .tab {
-  color: #004257;
   font-weight: 900;
   padding: 10px 0px;
   font-size: 14px;

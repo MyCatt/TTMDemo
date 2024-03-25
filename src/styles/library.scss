@@ -105,6 +105,7 @@ $primary: #004257;
             .tabs
             {
                 height: 100%;
+                display: flex;
 
                 .tab-wrapper
                 {
@@ -114,13 +115,14 @@ $primary: #004257;
                     margin-right: 30px;
                     align-items: center;
                     cursor: pointer;
+                    color: #3d3d3d;
                     &.active
                     {
                         border-bottom: 1px solid $primary;
+                        color: $primary;
                     }
                     .tab
                     {
-                        color: $primary;
                         font-weight: 900;
                         padding: 10px 0px;
                         font-size: 14px;
