@@ -1,27 +1,21 @@
-import './styles/library.css';
+import './styles/results.css';
 import React, { useState, useEffect, forceUpdate } from 'react';
 import { Link } from 'react-router-dom';
 
 function Results() {
 
-    const [expanded, setExpanded] = useState(true);
     const [selected, setSelected] = useState(0);
 
     const [, updateState] = React.useState();
     const forceUpdate = React.useCallback(() => updateState({}), []);
 
     const [data, setData] = useState({
-            "Create Vendor": {selected: false, status: "Active", owner: "Michael Catterall", lastrun: "Yesterday", runstatus: "Pass"},
-            "Create Vendor Template": {selected: false, status: "Active", owner: "Michael Catterall", lastrun: "Yesterday", runstatus: "Pass"}
+            "Create Vendor": {selected: false, type: 0, count: 1, passed: 1, failed: 0, status: "Pass", owner: "Michael Catterall", duration: "1m 38s", executed: "5 min ago", report: "https://pre-prod-new.thetestmart.com/log-page?timestamp=1709713814&typeReport=1&orderNumber=0&sessionId=chrome-90-0-9bbac129-1b22-47bf-86f2-4705b639c869&sessionIdNumber=0&testReport=customLog-0-Create%20Vendor&numberRun=2&variableSet=Default&developerReport=End%20To%20End-1709713814-0-Create%20Vendor.html"},
+            "Create Vendor 2": {selected: false, type: 0, count: 1, passed: 1, failed: 0, status: "Pass", owner: "Michael Catterall", duration: "1m 38s", executed: "5 min ago", report: "https://pre-prod-new.thetestmart.com/log-page?timestamp=1709713814&typeReport=1&orderNumber=0&sessionId=chrome-90-0-9bbac129-1b22-47bf-86f2-4705b639c869&sessionIdNumber=0&testReport=customLog-0-Create%20Vendor&numberRun=2&variableSet=Default&developerReport=End%20To%20End-1709713814-0-Create%20Vendor.html"}
     });
 
-    function toggleExpand()
-    {
-        setExpanded(!expanded);
-    }
-
   return (
-    <div id="library">
+    <div id="results">
         <div className="header">
             <div className="header__inner header__library redesign">
                 <div className="header__library--title">
@@ -73,28 +67,20 @@ function Results() {
 
                 <div className="list-test-suite">
                     <table className="table-suite">
-                        <tr className="row-head" onClick={() => toggleExpand()}>
+                        <tr className="row-head">
                             <th className="circle">
-                                <div className="circle-group">
-                                    { 1==2 && <span class="material-symbols-outlined">
-                                        check
-                                    </span>}
-                                </div>
-                            </th>
-                            <th className="td__test-name">Accounts Payable</th>
-                            <th className="status">Status</th>
-                            <th className="owner">Owner</th>
-                            <th className="last_run">Last Run</th>
-                            <th className="run_status">Run Status</th>
 
-                            <th className="more">
-                                <div>
-                                    <span class="material-symbols-outlined">more_horiz</span>
-                                    <span class="material-symbols-outlined">expand_more</span>
-                                </div>
                             </th>
+                            <th className="td__test-name">Today</th>
+                            <th className="status">Status</th>
+                            <th className="passed_count">Passed</th>
+                            <th className="failed_count">Failed</th>
+                            <th className="run_status">Executed</th>
+                            <th className="run_status">Duration</th>
+                            <th className="run_status">Report</th>
+                            
+                            <th className="download"></th>
                         </tr>
-                        {expanded ?
                             <tbody>
                                 {
                                     selected > -1 && Object.keys(data).map((d, i) => {
@@ -109,21 +95,18 @@ function Results() {
                                                 </div>
                                             </td>
                                             <td>{d}</td>
-                                            <td>{data[d]['status']}</td>
-                                            <td>{data[d]['owner']}</td>
-                                            <td>{data[d]['lastrun']}</td>
-                                            <td><span className="pass">{data[d]['runstatus']}</span></td>
-            
-                                            <td className="options">
-                                                <Link className="run-button" to={"/run/" + d.replaceAll(" ", "-").toLowerCase()}>
-                                                    <span class="material-symbols-outlined">play_circle</span>
-                                                </Link>
-                                                <span class="material-symbols-outlined">edit</span>
-                                            </td>
+                                            <td><span className="pass">{data[d]['status']}</span></td>
+                                            <td><span className="pass">{data[d]['passed']}</span></td>
+                                            <td><span className="fail">{data[d]['failed']}</span></td>
+                                            <td>{data[d]['executed']}</td>
+                                            <td>{data[d]['duration']}</td>
+                                            <td><a href={data[d]['report']} target="_blank">Open</a></td>
+
+                                            <td className="option"><span class="material-symbols-outlined">download</span></td>
                                         </tr>
                                     })
                                 }
-                        </tbody> : <div></div>}
+                        </tbody>
                     </table>
                 </div>
             </div>

@@ -12,7 +12,15 @@ function App() {
   return (
     <BrowserRouter basename='/TTMDemo'>
           <Routes>
-            <Route path="/library" element=
+            <Route path="/" element=
+            {
+              <div className="App">
+                <Navigation />
+                <Library />
+              </div>
+            } />
+
+          <Route path="/library" element=
             {
               <div className="App">
                 <Navigation />

@@ -88,7 +88,7 @@ $primary: #004257;
     }
 }
 
-#library
+#results
 {
     .library-header
     {
@@ -186,16 +186,15 @@ $primary: #004257;
             .list-action__right
             {
                 display: flex;
-                gap: 10px;
+                gap: 7.5px;
                 button
                 {
-                    background: #33515b;
+                    background: $primary;
                     color: $primary;
                     border-radius: 4px;
                     padding: 10px 15px;
                     border: 0;
                     outline: 0;
-                    font-weight: 800;
                     box-shadow: 0 3px 6px rgba(0,0,0,.058823529411764705);
                     font-family: 'ProximaNova';
                     height: 40px;
@@ -212,7 +211,15 @@ $primary: #004257;
                 }
                 .delete
                 {
-                    background: #f13131 !important;
+                    background: #fff !important;
+                    color: red;
+                    border: 1px solid red;
+                    transition: 0.3s background;
+                    &:hover
+                    {
+                        background: red !important;
+                        color: #fff;
+                    }
                 }
             }
         }
@@ -221,53 +228,57 @@ $primary: #004257;
         {
             width: 100%;
             margin-top: 15px;
+            border-radius: 3px;
+            overflow: hidden;
             .table-suite  
             {
                 border-collapse:collapse;
                 table-layout: fixed;
                 background: #fff;
                 box-shadow: 0 2px 8px 0 rgba(99,99,99,.05);
-                border-radius: 3px;
+                border-radius: 5px;
                 width: 100%;
-
                 .row-head
                 {
-                    background: #f9fafb !important;
+                    
                     text-align: left;
                     border-right: 2px solid #f5f6f7;
                     height: 50px;
-
                     th
                     {
                         box-sizing: border-box;
                         padding: 0 10px;
                         font-weight: 800;
                         font-size: 14px;
-                        color: #545f6b;
-                        border-right: 2px solid #f5f6f7;
+                        color: #ffffff;
+                        border: 0;
+                        background: $primary !important;
                         cursor: pointer;
                     }
 
                     .td__test-name
                     {
-                        color: $primary;
                         width: 500px !important;
+                        color: #fff;
                     }
 
-                    .run_status
+                    .passed_count
                     {
-                        width: auto;
+                        width: 150px;
+                    } 
+                    .failed_count
+                    {
+                        width: 150px;
                     }
 
-                    .more
+                    .status
                     {
-                        position: sticky;
-                        width: 106px;
-                        div
-                        {
-                            display: flex;
-                            justify-content: space-around;
-                        }
+                        width: 150px;
+                    }
+
+                    .download
+                    {
+                        width: 50px;
                     }
 
                     .circle
@@ -296,6 +307,11 @@ $primary: #004257;
                 tr
                 {
                     background: #fff;
+                    a
+                    {
+                        color: inherit;
+                        font-weight: bold;
+                    }
                     td
                     {
                         box-sizing: border-box;
@@ -313,8 +329,17 @@ $primary: #004257;
                         .pass
                         {
                             background: #f7fff6;
-                            border: 1px solid #d7f1d4;
                             color: #3bb233;
+                            border-radius: 4px;
+                            display: inline-block;
+                            margin: 0;
+                            padding: 5px 10px;
+                            font-weight: 800;
+                        }
+                        .fail
+                        {
+                            background: #fff6f6;
+                            color: #ec3d3d;
                             border-radius: 4px;
                             display: inline-block;
                             margin: 0;
@@ -330,7 +355,6 @@ $primary: #004257;
                         box-sizing: border-box;
                         padding: 15px;
                         cursor: pointer;
-                        background: #f9fafb !important;
                         .circle-group
                         {
                             border: 1px solid #dfe5e7;
@@ -347,14 +371,11 @@ $primary: #004257;
                         }
                     }
 
-                    .options
+                    .option
                     {
-                        display: flex;
-                        gap: 5px;
-                        justify-content: center;
-                        align-items: center;
+                        text-align: center;
                         span {
-                            background: #588d9f;
+                            background: $primary;
                             color: #fff;
                             border-radius: 5px;
                             padding: 5px;
@@ -364,13 +385,10 @@ $primary: #004257;
                             height: 15px;
                             width: 15px;
                             line-height: 15px;
-                        };
+                            margin: 0;
+                            cursor: pointer;
+                        }
                     }
-                }
-
-                tr:nth-child(2n)
-                {
-                    background: #fdfdfd;
                 }
             }
         }
